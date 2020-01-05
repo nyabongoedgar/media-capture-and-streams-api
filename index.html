@@ -1,0 +1,25 @@
+<html>
+
+<head>
+    <script>
+        const constraints = {
+            video: true,
+            audio: true
+        };
+
+        let initMedia = async function getMedia(constraints) {
+            let stream = null;
+            try {
+                console.log('in the try')
+                stream = await navigator.mediaDevices.getUserMedia(constraints);
+            }
+            catch (err) {
+                throw err;
+                console.log('in the catch')
+            }
+        };
+        initMedia(constraints);
+    </script>
+</head>
+
+</html>
